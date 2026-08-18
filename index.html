@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hafsa Akter | Digital Marketing Expert</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <div class="preloader" id="preloader">
+        <div class="preloader-ring"></div>
+        <div class="preloader-ring r2"></div>
+        <div class="preloader-ring r3"></div>
+        <span class="preloader-text">HA</span>
+    </div>
+
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <canvas id="neuralCanvas"></canvas>
+
+    <div class="noise-overlay"></div>
+
+    <div class="aurora-wrap" aria-hidden="true">
+        <div class="aurora a1"></div>
+        <div class="aurora a2"></div>
+        <div class="aurora a3"></div>
+    </div>
+
+    <nav class="nav" id="navbar">
+        <a href="#home" class="nav-logo">
+            <span class="logo-bracket">&lt;</span>HA<span class="logo-bracket">/&gt;</span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#home" class="nav-link active" data-section="home">Home</a>
+            <a href="#about" class="nav-link" data-section="about">About</a>
+            <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+            <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+            <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+            <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <div class="mobile-overlay" id="mobileOverlay">
+        <div class="mobile-nav-inner">
+            <a href="#home" class="mobile-link">Home</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#experience" class="mobile-link">Experience</a>
+            <a href="#projects" class="mobile-link">Projects</a>
+            <a href="#skills" class="mobile-link">Skills</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+        </div>
+    </div>
+
+    <section class="hero" id="home">
+        <div class="hero-orb orb-1"></div>
+        <div class="hero-orb orb-2"></div>
+        <div class="hero-orb orb-3"></div>
+        <div class="hero-orb orb-4"></div>
+        <div class="hero-grid-lines"></div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge anim-item">
+                    <span class="badge-dot"></span>
+                    Available for freelance work
+                </div>
+                <p class="hero-greeting anim-item">Hello, I'm</p>
+                <h1 class="hero-name anim-item">
+                    Hafsa<br><span class="name-gradient">Akter</span>
+                </h1>
+                <p class="hero-role anim-item">
+                    <span class="role-word" id="typedRole"></span><span class="cursor-blink">|</span>
+                </p>
+                <p class="hero-desc anim-item">
+                    Crafting high-performing <span class="neon-text">paid media campaigns</span>, 
+                    <span class="neon-text">SEO strategies</span>, and 
+                    <span class="neon-text">AI-powered content</span> that drives measurable ROI for global brands.
+                </p>
+                <div class="hero-tags anim-item">
+                    <span class="ntag"><i class="fab fa-meta"></i> Meta Ads</span>
+                    <span class="ntag"><i class="fab fa-google"></i> Google Ads</span>
+                    <span class="ntag"><i class="fab fa-youtube"></i> YouTube SEO</span>
+                    <span class="ntag"><i class="fas fa-brain"></i> AI Content</span>
+                </div>
+                <div class="hero-actions anim-item">
+                    <a href="#projects" class="btn-glow">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn-ghost">
+                        <span>Contact Me</span>
+                    </a>
+                </div>
+                <div class="hero-socials anim-item">
+                    <a href="https://www.linkedin.com/in/digitalmarketingexperthafsa" target="_blank" class="social-orb" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.fiverr.com/hafsaco" target="_blank" class="social-orb" aria-label="Fiverr"><i class="fas fa-briefcase"></i></a>
+                    <a href="https://www.upwork.com/freelancers/~01a61c853c045a4799" target="_blank" class="social-orb" aria-label="Upwork"><i class="fab fa-upwork"></i></a>
+                    <a href="mailto:mishafsa637@gmail.com" class="social-orb" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <div class="hero-visual anim-item">
+                <div class="holo-card" id="holoCard">
+                    <div class="holo-card-glow"></div>
+                    <div class="holo-card-shine"></div>
+                    <div class="holo-card-content">
+                        <div class="holo-avatar">
+                            <div class="avatar-rings">
+                                <div class="ring ring-1"></div>
+                                <div class="ring ring-2"></div>
+                                <div class="ring ring-3"></div>
+                            </div>
+                            <div class="avatar-core">HA</div>
+                        </div>
+                        <h3 class="holo-name">Hafsa Akter</h3>
+                        <p class="holo-role">Digital Marketer</p>
+                        <div class="holo-divider"></div>
+                        <div class="holo-stats">
+                            <div class="holo-stat">
+                                <span class="holo-stat-num" data-target="50">0</span><span class="holo-stat-suffix">+</span>
+                                <span class="holo-stat-label">Projects</span>
+                            </div>
+                            <div class="holo-stat">
+                                <span class="holo-stat-num" data-target="100">0</span><span class="holo-stat-suffix">%</span>
+                                <span class="holo-stat-label">Satisfaction</span>
+                            </div>
+                            <div class="holo-stat">
+                                <span class="holo-stat-num" data-target="2">0</span><span class="holo-stat-suffix">+</span>
+                                <span class="holo-stat-label">Years</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="scroll-cue anim-item">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <section class="section" id="about">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-num anim-item">01</span>
+                <h2 class="sec-title anim-item">About <span class="neon-text">Me</span></h2>
+                <div class="sec-line anim-item"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-visual anim-item" data-dir="left">
+                    <div class="about-card-glass">
+                        <div class="about-avatar-wrap">
+                            <div class="about-avatar-core">HA</div>
+                            <div class="orbit-badge ob-1"><i class="fab fa-facebook-f"></i></div>
+                            <div class="orbit-badge ob-2"><i class="fab fa-google"></i></div>
+                            <div class="orbit-badge ob-3"><i class="fas fa-brain"></i></div>
+                            <div class="orbit-badge ob-4"><i class="fab fa-youtube"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text anim-item" data-dir="right">
+                    <h3 class="about-heading">Professional Digital Marketer & AI Content Creator</h3>
+                    <p>
+                        Results-driven <span class="neon-text">Digital Marketer</span>, <span class="neon-text">Paid Media Specialist</span>, and 
+                        <span class="neon-text">AI Content Creator</span> with extensive expertise across Facebook & Instagram Ads, 
+                        Google Ads (Search, Display, YouTube), Advanced SEO, and YouTube Channel Growth.
+                    </p>
+                    <p>
+                        Active team member at <span class="neon-text">FSD FreelanceHelp</span>, managing targeted ad campaigns, 
+                        optimizing CRO, and integrating Generative AI workflows 
+                        (ChatGPT, Google Gemini, Antigravity) to produce high-performing creative assets and drive measurable ROI for global clients.
+                    </p>
+                    <div class="about-pill-row">
+                        <div class="about-pill">
+                            <div class="pill-icon"><i class="fas fa-crosshairs"></i></div>
+                            <div>
+                                <h4>Paid Media</h4>
+                                <p>Facebook, Instagram & Google Ads</p>
+                            </div>
+                        </div>
+                        <div class="about-pill">
+                            <div class="pill-icon"><i class="fas fa-chart-line"></i></div>
+                            <div>
+                                <h4>SEO & Analytics</h4>
+                                <p>Advanced SEO & Performance Tracking</p>
+                            </div>
+                        </div>
+                        <div class="about-pill">
+                            <div class="pill-icon"><i class="fas fa-wand-magic-sparkles"></i></div>
+                            <div>
+                                <h4>AI Content</h4>
+                                <p>Generative AI & Creative Production</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn-glow"><span>Let's Collaborate</span><i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-num anim-item">02</span>
+                <h2 class="sec-title anim-item">Work <span class="neon-text">Experience</span></h2>
+                <div class="sec-line anim-item"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-track"></div>
+                <div class="tl-item anim-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-head">
+                            <div>
+                                <h3>Digital Marketer & Team Member</h3>
+                                <p class="tl-company">FSD FreelanceHelp</p>
+                            </div>
+                            <div class="tl-meta">
+                                <span class="tl-date">2024 &mdash; Present</span>
+                                <span class="tl-loc">Remote</span>
+                            </div>
+                        </div>
+                        <ul class="tl-list">
+                            <li><i class="fas fa-chevron-right"></i> Collaborated with the agency team to plan, execute, and scale high-performing digital marketing campaigns across diverse niches.</li>
+                            <li><i class="fas fa-chevron-right"></i> Managed Facebook, Instagram, and Google Ads accounts, focusing on audience segmentation, budget allocation, and CRO.</li>
+                            <li><i class="fas fa-chevron-right"></i> Conducted Advanced SEO audits (On-page, keyword mapping, technical) and YouTube channel optimization for organic reach.</li>
+                            <li><i class="fas fa-chevron-right"></i> Implemented generative AI workflows (ChatGPT, Google Gemini) to streamline ad copy generation and multimedia assets.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tl-item anim-item">
+                    <div class="tl-dot"></div>
+                    <div class="tl-card glass-card">
+                        <div class="tl-head">
+                            <div>
+                                <h3>Facebook & Google Ads Specialist / AI Content Strategist</h3>
+                                <p class="tl-company">Freelance Digital Marketing & Media Buying</p>
+                            </div>
+                            <div class="tl-meta">
+                                <span class="tl-date">2024 &mdash; Present</span>
+                                <span class="tl-loc">Upwork & Fiverr</span>
+                            </div>
+                        </div>
+                        <ul class="tl-list">
+                            <li><i class="fas fa-chevron-right"></i> Executed end-to-end paid media campaigns on Upwork and Fiverr, handling media buying, retargeting, and performance tracking.</li>
+                            <li><i class="fas fa-chevron-right"></i> Delivered comprehensive YouTube SEO solutions, optimizing video metadata, tags, and thumbnails for impressions and watch time.</li>
+                            <li><i class="fas fa-chevron-right"></i> Developed prompt-engineered visual and written copy for DTC brands, reducing content production turnaround time.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="projects">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-num anim-item">03</span>
+                <h2 class="sec-title anim-item">Client <span class="neon-text">Projects</span></h2>
+                <div class="sec-line anim-item"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-flip anim-item">
+                    <div class="flip-inner">
+                        <div class="flip-front glass-card">
+                            <div class="flip-icon"><i class="fas fa-paw"></i></div>
+                            <h3>Purrfect Bites</h3>
+                            <p class="flip-industry">Pet Food (Cat Food)</p>
+                            <span class="flip-year">2025</span>
+                            <div class="flip-tags">
+                                <span>Meta Ads</span><span>Google Search</span><span>AI Creatives</span>
+                            </div>
+                            <span class="flip-hint"><i class="fas fa-rotate"></i> Hover to flip</span>
+                        </div>
+                        <div class="flip-back glass-card">
+                            <h3>Project Details</h3>
+                            <ul>
+                                <li>Developed targeted Meta ad campaigns and Google Search Ads to capture high-intent pet owners</li>
+                                <li>Produced engaging AI-generated visual creatives and compelling ad copy</li>
+                            </ul>
+                            <div class="review-block">
+                                <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0/5.0</span></div>
+                                <p>"Hafsa transformed our online sales! Her Meta ad targeting and AI creatives brought us high-converting cat owners."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-flip anim-item">
+                    <div class="flip-inner">
+                        <div class="flip-front glass-card">
+                            <div class="flip-icon"><i class="fas fa-spa"></i></div>
+                            <h3>Emma Wilson</h3>
+                            <p class="flip-industry">US-Based Skincare Brand</p>
+                            <span class="flip-year">2025</span>
+                            <div class="flip-tags">
+                                <span>Instagram Ads</span><span>YouTube Promo</span><span>Analytics</span>
+                            </div>
+                            <span class="flip-hint"><i class="fas fa-rotate"></i> Hover to flip</span>
+                        </div>
+                        <div class="flip-back glass-card">
+                            <h3>Project Details</h3>
+                            <ul>
+                                <li>Executed Instagram Ads and YouTube promotional campaigns focused on product demos</li>
+                                <li>Set up end-to-end event tracking and conversion analytics, optimizing CPA by 25%</li>
+                            </ul>
+                            <div class="review-block">
+                                <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0/5.0</span></div>
+                                <p>"Exceptional work on our Instagram campaigns. Hafsa reduced our CPA significantly. Highly recommended!"</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-flip anim-item">
+                    <div class="flip-inner">
+                        <div class="flip-front glass-card">
+                            <div class="flip-icon"><i class="fas fa-shirt"></i></div>
+                            <h3>Michael Anderson</h3>
+                            <p class="flip-industry">Fashion / Clothing / Apparel</p>
+                            <span class="flip-year">2026</span>
+                            <div class="flip-tags">
+                                <span>Dynamic Ads</span><span>Google Display</span><span>E-com SEO</span>
+                            </div>
+                            <span class="flip-hint"><i class="fas fa-rotate"></i> Hover to flip</span>
+                        </div>
+                        <div class="flip-back glass-card">
+                            <h3>Project Details</h3>
+                            <ul>
+                                <li>Structured dynamic product ads (DPA) and Google Display retargeting campaigns</li>
+                                <li>Implemented on-page e-commerce SEO, improving organic visibility and CTR</li>
+                            </ul>
+                            <div class="review-block">
+                                <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0/5.0</span></div>
+                                <p>"The Dynamic Product Ads setup was flawless. Our traffic and seasonal sales spiked right after launch."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-flip anim-item">
+                    <div class="flip-inner">
+                        <div class="flip-front glass-card">
+                            <div class="flip-icon"><i class="fas fa-building"></i></div>
+                            <h3>Charlotte Davis</h3>
+                            <p class="flip-industry">Real Estate / Property Insurance</p>
+                            <span class="flip-year">2026</span>
+                            <div class="flip-tags">
+                                <span>Google Search</span><span>Lead Gen</span><span>Landing Pages</span>
+                            </div>
+                            <span class="flip-hint"><i class="fas fa-rotate"></i> Hover to flip</span>
+                        </div>
+                        <div class="flip-back glass-card">
+                            <h3>Project Details</h3>
+                            <ul>
+                                <li>Designed high-converting Google Search and Local Lead Generation campaigns</li>
+                                <li>Optimized landing page copy and lead capture forms for qualified inquiries</li>
+                            </ul>
+                            <div class="review-block">
+                                <div class="review-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><span>5.0/5.0</span></div>
+                                <p>"Generated high-quality inbound real estate leads within the first week. Professional and data-driven."</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="skills">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-num anim-item">04</span>
+                <h2 class="sec-title anim-item">My <span class="neon-text">Skills</span></h2>
+                <div class="sec-line anim-item"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-card glass-card anim-item">
+                    <div class="sk-head"><div class="sk-icon"><i class="fas fa-bullhorn"></i></div><h3>Paid Advertising</h3></div>
+                    <div class="sk-items">
+                        <div class="sk-row"><span>Facebook Ads</span><div class="sk-track"><div class="sk-fill" data-w="95"></div></div></div>
+                        <div class="sk-row"><span>Instagram Ads</span><div class="sk-track"><div class="sk-fill" data-w="93"></div></div></div>
+                        <div class="sk-row"><span>Google Search Ads</span><div class="sk-track"><div class="sk-fill" data-w="90"></div></div></div>
+                        <div class="sk-row"><span>Google Display Ads</span><div class="sk-track"><div class="sk-fill" data-w="88"></div></div></div>
+                        <div class="sk-row"><span>YouTube Ads</span><div class="sk-track"><div class="sk-fill" data-w="85"></div></div></div>
+                        <div class="sk-row"><span>Media Buying & Retargeting</span><div class="sk-track"><div class="sk-fill" data-w="92"></div></div></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card anim-item">
+                    <div class="sk-head"><div class="sk-icon"><i class="fas fa-magnifying-glass-chart"></i></div><h3>SEO & YouTube Growth</h3></div>
+                    <div class="sk-items">
+                        <div class="sk-row"><span>On-Page SEO</span><div class="sk-track"><div class="sk-fill" data-w="94"></div></div></div>
+                        <div class="sk-row"><span>Off-Page SEO</span><div class="sk-track"><div class="sk-fill" data-w="90"></div></div></div>
+                        <div class="sk-row"><span>Technical SEO</span><div class="sk-track"><div class="sk-fill" data-w="87"></div></div></div>
+                        <div class="sk-row"><span>YouTube SEO & Promotion</span><div class="sk-track"><div class="sk-fill" data-w="92"></div></div></div>
+                        <div class="sk-row"><span>Keyword Research</span><div class="sk-track"><div class="sk-fill" data-w="95"></div></div></div>
+                        <div class="sk-row"><span>Competitor Analysis</span><div class="sk-track"><div class="sk-fill" data-w="88"></div></div></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card anim-item">
+                    <div class="sk-head"><div class="sk-icon"><i class="fas fa-chart-mixed"></i></div><h3>Analytics & Strategy</h3></div>
+                    <div class="sk-items">
+                        <div class="sk-row"><span>Conversion Rate Optimization</span><div class="sk-track"><div class="sk-fill" data-w="91"></div></div></div>
+                        <div class="sk-row"><span>Web Analytics</span><div class="sk-track"><div class="sk-fill" data-w="89"></div></div></div>
+                        <div class="sk-row"><span>Event Tracking</span><div class="sk-track"><div class="sk-fill" data-w="86"></div></div></div>
+                        <div class="sk-row"><span>Social Media Marketing</span><div class="sk-track"><div class="sk-fill" data-w="93"></div></div></div>
+                        <div class="sk-row"><span>Social Media Management</span><div class="sk-track"><div class="sk-fill" data-w="90"></div></div></div>
+                    </div>
+                </div>
+                <div class="skill-card glass-card anim-item">
+                    <div class="sk-head"><div class="sk-icon"><i class="fas fa-wand-magic-sparkles"></i></div><h3>AI & Creative Tools</h3></div>
+                    <div class="sk-items">
+                        <div class="sk-row"><span>ChatGPT</span><div class="sk-track"><div class="sk-fill" data-w="95"></div></div></div>
+                        <div class="sk-row"><span>Google Gemini</span><div class="sk-track"><div class="sk-fill" data-w="90"></div></div></div>
+                        <div class="sk-row"><span>Antigravity AI</span><div class="sk-track"><div class="sk-fill" data-w="85"></div></div></div>
+                        <div class="sk-row"><span>AI Image/Video Generation</span><div class="sk-track"><div class="sk-fill" data-w="88"></div></div></div>
+                        <div class="sk-row"><span>Canva / Graphic Design</span><div class="sk-track"><div class="sk-fill" data-w="87"></div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="education">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-num anim-item">05</span>
+                <h2 class="sec-title anim-item">My <span class="neon-text">Education</span></h2>
+                <div class="sec-line anim-item"></div>
+            </div>
+            <div class="edu-card glass-card anim-item">
+                <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="edu-body">
+                    <h3>Bachelor of Science / Arts</h3>
+                    <p class="edu-school">National University</p>
+                    <p class="edu-meta">2020 &mdash; 2024 &bull; Rajbari, Dhaka, Bangladesh</p>
+                    <p class="edu-focus">Focus Areas: Digital Media, Marketing Communications, and Information Technology</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-num anim-item">06</span>
+                <h2 class="sec-title anim-item">Get In <span class="neon-text">Touch</span></h2>
+                <div class="sec-line anim-item"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-left anim-item">
+                    <h3>Let's Build Something <span class="neon-text">Extraordinary</span></h3>
+                    <p>Ready to scale your business with data-driven marketing? Let's connect and create something extraordinary together.</p>
+                    <div class="contact-cards">
+                        <a href="mailto:mishafsa637@gmail.com" class="ccard glass-card">
+                            <div class="ccard-icon"><i class="fas fa-envelope"></i></div>
+                            <div><span class="ccard-label">Email</span><span class="ccard-value">mishafsa637@gmail.com</span></div>
+                        </a>
+                        <a href="https://wa.me/8801606986095" target="_blank" class="ccard glass-card">
+                            <div class="ccard-icon"><i class="fab fa-whatsapp"></i></div>
+                            <div><span class="ccard-label">WhatsApp</span><span class="ccard-value">+880 1606-986095</span></div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/digitalmarketingexperthafsa" target="_blank" class="ccard glass-card">
+                            <div class="ccard-icon"><i class="fab fa-linkedin-in"></i></div>
+                            <div><span class="ccard-label">LinkedIn</span><span class="ccard-value">Connect with me</span></div>
+                        </a>
+                        <div class="ccard glass-card">
+                            <div class="ccard-icon"><i class="fas fa-location-dot"></i></div>
+                            <div><span class="ccard-label">Location</span><span class="ccard-value">Rajbari, Dhaka, Bangladesh</span></div>
+                        </div>
+                    </div>
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/digitalmarketingexperthafsa" target="_blank" class="social-orb"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.fiverr.com/hafsaco" target="_blank" class="social-orb"><i class="fas fa-briefcase"></i></a>
+                        <a href="https://www.upwork.com/freelancers/~01a61c853c045a4799" target="_blank" class="social-orb"><i class="fab fa-upwork"></i></a>
+                        <a href="https://fsdfreelancehelp.com/team-member/hafsa-akter/" target="_blank" class="social-orb"><i class="fas fa-users"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right anim-item">
+                    <form class="cform glass-card" id="contactForm">
+                        <div class="cfield">
+                            <input type="text" id="fname" required placeholder=" ">
+                            <label for="fname">Your Name</label>
+                        </div>
+                        <div class="cfield">
+                            <input type="email" id="femail" required placeholder=" ">
+                            <label for="femail">Your Email</label>
+                        </div>
+                        <div class="cfield">
+                            <input type="text" id="fsubject" required placeholder=" ">
+                            <label for="fsubject">Subject</label>
+                        </div>
+                        <div class="cfield">
+                            <textarea id="fmessage" rows="5" required placeholder=" "></textarea>
+                            <label for="fmessage">Your Message</label>
+                        </div>
+                        <button type="submit" class="btn-glow btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-inner">
+            <a href="#home" class="footer-logo">
+                <span class="logo-bracket">&lt;</span>HA<span class="logo-bracket">/&gt;</span>
+            </a>
+            <p class="footer-tagline">Crafting Digital Excellence with Data-Driven Strategies</p>
+            <div class="footer-line"></div>
+            <p class="footer-copy">&copy; 2026 Hafsa Akter. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <a href="#home" class="btt" id="backToTop" aria-label="Back to top"><i class="fas fa-chevron-up"></i></a>
+
+    <script src="script.js"></script>
+</body>
+</html>
